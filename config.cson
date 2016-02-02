@@ -1,0 +1,75 @@
+"*":
+  "activate-power-mode":
+    particles:
+      size: {}
+      spawnCount: {}
+      totalCount: {}
+    screenShake: {}
+  "atom-beautify": {}
+  build:
+    selectTriggers: false
+    stealFocus: false
+  core:
+    customFileTypes:
+      "source.git-config": [
+        "gitconfig"
+      ]
+      "source.plist": [
+        "plist"
+      ]
+    disabledPackages: [
+      "exception-reporting"
+      "metrics"
+    ]
+    ignoredNames: [
+      ".git"
+      ".svn"
+      ".DS_Store"
+      ".scssc"
+      ".cache"
+      ".pyc"
+      ".sqlite3"
+      ".exe"
+      ".dll"
+      ".sublime-workspace"
+      ".sublime-project"
+    ]
+    projectHome: "~/Projects/"
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax-dark"
+    ]
+  editor:
+    fontFamily: "SourceCodePro-Light"
+    fontSize: 13
+    invisibles: {}
+    showIndentGuide: true
+  "exception-reporting": {}
+  "git-plus": {}
+  linter: {}
+  "linter-sass-lint":
+    noConfigDisable: true
+  "linter-scss-lint":
+    disableWhenNoConfigFileInPath: true
+  "markdown-preview": {}
+  metrics: {}
+  minimap:
+    plugins:
+      pigments: true
+  "quick-highlight": {}
+  "release-notes":
+    viewedVersion: "0.94.0"
+  "spell-check":
+    grammars: [
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+    ]
+  tabs:
+    enableVcsColoring: true
+    usePreviewTabs: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
