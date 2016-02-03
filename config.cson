@@ -7,7 +7,6 @@
         min: 1
       spawnCount:
         min: 2
-      totalCount: 500
     screenShake:
       maxIntensity: 4
       minIntensity: 2
@@ -26,6 +25,7 @@
     disabledPackages: [
       "exception-reporting"
       "metrics"
+      "linter-sass-lint"
     ]
     ignoredNames: [
       ".git"
@@ -38,7 +38,8 @@
       ".exe"
       ".dll"
       ".sublime-workspace"
-      ".sublime-project"
+      ".sublime-projects"
+      "node_modules"
     ]
     projectHome: "~/Projects/"
     themes: [
@@ -62,6 +63,8 @@
   minimap:
     plugins:
       pigments: true
+  "package-sync":
+    forceOverwrite: true
   "quick-highlight": {}
   "release-notes":
     viewedVersion: "0.94.0"
@@ -75,6 +78,9 @@
   tabs:
     enableVcsColoring: true
     usePreviewTabs: true
+  "tree-view":
+    hideIgnoredNames: true
+    squashDirectoryNames: true
   welcome:
     showOnStartup: false
   whitespace:
