@@ -40,7 +40,6 @@
     disabledPackages: [
       "exception-reporting"
       "metrics"
-      "linter-sass-lint"
       "autoclose-html"
     ]
     ignoredNames: [
@@ -70,7 +69,6 @@
   editor:
     autoIndentOnPaste: false
     fontFamily: "SourceCodePro-Light"
-    fontSize: 13
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
@@ -78,7 +76,8 @@
   "find-and-replace": {}
   "fuzzy-finder": {}
   "git-plus": {}
-  linter: {}
+  linter:
+    errorPanelHeight: 26
   "linter-eslint": {}
   "linter-jscs":
     displayAs: "jscs Warning"
@@ -90,12 +89,14 @@
     noConfigDisable: true
   "linter-scss-lint":
     disableWhenNoConfigFileInPath: true
+    executablePath: "~/.rvm/bin/atom_scss-lint"
   "markdown-preview": {}
   "markdown-writer":
     fileExtension: ".markdown, .md"
   minimap:
     plugins:
       pigments: true
+      pigmentsDecorationsZIndex: 0
   "package-sync":
     forceOverwrite: true
   "quick-highlight": {}
