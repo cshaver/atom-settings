@@ -7,3 +7,4 @@ dev
 packages/
 atom-shell/
 blob-store/
+projects.cson

@@ -1,5 +1,6 @@
 "*":
   "activate-power-mode":
+    autoToggle: false
     particles:
       enabled: true
       size:
@@ -11,15 +12,32 @@
       maxIntensity: 4
       minIntensity: 2
   alignment: {}
+  "atom-beautify":
+    general:
+      _analyticsUserId: "061edd24-4d2e-4dd9-8a6c-145dcb149a67"
+  "atom-easy-jsdoc": {}
   "atom-material-ui":
-    colors: {}
+    colors:
+      abaseColor:
+        red: 246
+        green: 109
+        blue: 136
+        alpha: 1
+      accentColor:
+        red: 125
+        green: 255
+        blue: 229
+        alpha: 1
+      genAccent: true
+      predefinedColor: "Purple"
     fonts:
       fontSize: 16
     tabs:
       compactTabs: true
     treeView:
       compactList: true
-    ui: {}
+    ui:
+      panelContrast: true
   "autoclose-html":
     additionalGrammars: [
       "*"
@@ -27,7 +45,10 @@
   autosave:
     enabled: true
   build:
+    overrideThemeColors: false
+    saveOnBuild: true
     selectTriggers: false
+    statusBar: "Disable"
     stealFocus: false
   core:
     customFileTypes:
@@ -41,6 +62,8 @@
       "exception-reporting"
       "metrics"
       "autoclose-html"
+      "status-bar"
+      "npm"
     ]
     ignoredNames: [
       ".git"
@@ -59,13 +82,19 @@
       "bower_components"
       "node_modules"
       "target"
+      ".rej"
       "resources"
     ]
     projectHome: "~/Projects/"
     themes: [
       "atom-material-ui"
-      "atom-material-syntax-dark"
+      "cake-syntax"
     ]
+  docblockr:
+    align_tags: "no"
+    lower_case_primitives: true
+    newline_after_block: true
+    spacer_between_sections: true
   editor:
     autoIndentOnPaste: false
     fontFamily: "SourceCodePro-Light"
@@ -76,11 +105,12 @@
   "find-and-replace": {}
   "fuzzy-finder": {}
   "git-plus": {}
+  "gruvbox-plus-syntax": {}
   linter:
     errorPanelHeight: 26
+    showErrorPanel: false
   "linter-eslint": {}
   "linter-jscs":
-    displayAs: "jscs Warning"
     esnext: true
     onlyConfig: true
   "linter-jshint":
@@ -89,7 +119,6 @@
     noConfigDisable: true
   "linter-scss-lint":
     disableWhenNoConfigFileInPath: true
-    executablePath: "~/.rvm/bin/atom_scss-lint"
   "markdown-preview": {}
   "markdown-writer":
     fileExtension: ".markdown, .md"
@@ -114,6 +143,7 @@
     usePreviewTabs: true
   "tree-view":
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   welcome:
     showOnStartup: false
