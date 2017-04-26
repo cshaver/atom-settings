@@ -8,8 +8,18 @@
  * http://www.lesscss.org
  */
 
-.tree-view {
+atom-workspace,
+.tool-panel, atom-panel {
+  font-family: Raleway, sans-serif;
+  font-weight: lighter;
+}
 
+atom-text-editor {
+
+}
+
+.tree-view {
+  font-size: 11px;
 }
 
 .editor {
@@ -18,4 +28,57 @@
 
 .editor .cursor {
 
+}
+
+atom-notification.error {
+  opacity: 0.05;
+}
+atom-notification.error:hover {
+  opacity: 1.0;
+}
+
+// atom-notification.error {
+//   width: 32px;
+//   height: 32px;
+// }
+// atom-notification.error:hover {
+//   width: auto;
+//   height: auto;
+// }
+
+.list-tree {
+  &.has-collapsable-children {
+    .list-nested-item > .list-tree > li,
+    .list-nested-item > .list-group > li,
+    li.list-item {
+      padding-left: 14px;
+    }
+
+    li.list-item {
+      margin-left: 14px;
+    }
+
+    .list-nested-item > .list-item::before {
+      margin-right: 2px;
+    }
+  }
+
+  .list-nested-item > .list-tree > li, .list-tree .list-nested-item > .list-group > li {
+    padding-left: 16px;
+  }
+}
+
+.list-group .icon::before, .list-tree .icon::before {
+  margin-right: 0.8em;
+}
+
+.list-group li:not(.list-nested-item),
+.list-tree li:not(.list-nested-item),
+.list-group li.list-nested-item > .list-item,
+.list-tree li.list-nested-item > .list-item {
+  line-height: 2.8em;
+}
+
+.linter-gutter.icon::before {
+  margin-right: 0;
 }

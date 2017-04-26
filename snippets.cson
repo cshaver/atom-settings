@@ -13,3 +13,13 @@
 #     'prefix': 'log'
 #     'body': 'console.log $1'
 #
+
+'.source.js':
+  'Console debug'
+    'prefix': 'debug'
+    'body': 'console.debug($1);'
+
+'.source.js':
+  'For loop':
+    'prefix': 'for'
+    'body': 'for (let ${2:i} = 0; ${2:i} < ${1:array}.length; ${2:i}++) {\n\tlet ${1:arrIteme${1:array}[${2:i}];$3\'

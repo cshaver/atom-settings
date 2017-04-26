@@ -18,11 +18,10 @@
 #
 
 'body':
-  'cmd-ctrl-down':  'pane:split-down-and-move-active-item'
-  'cmd-ctrl-up':    'pane:split-up-and-move-active-item'
-  'cmd-ctrl-left':  'pane:split-left-and-move-active-item'
-  'cmd-ctrl-right': 'pane:split-right-and-move-active-item'
+  'cmd-k down': 'pane:split-down-and-move-active-item'
+  'cmd-k up': 'pane:split-up-and-move-active-item'
+  'cmd-k left': 'pane:split-left-and-move-active-item'
+  'cmd-k right': 'pane:split-right-and-move-active-item'
 
-'atom-workspace atom-text-editor:not([mini])':
-  'cmd-ctrl-up':   'pane:split-up-and-move-active-item'
-  'cmd-ctrl-down': 'pane:split-down-and-move-active-item'
+'atom-workspace':
+  'cmd-b': 'recent-files-fuzzy-finder:toggle-finder'

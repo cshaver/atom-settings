@@ -12,3 +12,7 @@
 #   editor = editorView.getEditor()
 #   if path.extname(editor.getPath()) is '.md'
 #     editor.setSoftWrap(true)
+
+atom.workspace.observeTextEditors (editor) ->
+  if editor.getPath()?.match(/\/dotfiles\/.+\/[^.]+$/)
+    editor.setGrammar(atom.grammars.grammarForScopeName('text.sh'))

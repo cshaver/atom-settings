@@ -1,4 +1,7 @@
 "*":
+  "":
+    eslintrc: "source.json"
+    nvmrc: "source.json"
   "activate-power-mode":
     autoToggle: false
     particles:
@@ -15,26 +18,20 @@
   "atom-beautify":
     general:
       _analyticsUserId: "061edd24-4d2e-4dd9-8a6c-145dcb149a67"
+    json:
+      brace_style: "expand"
   "atom-easy-jsdoc": {}
   "atom-material-ui":
     colors:
-      abaseColor:
-        red: 246
-        green: 109
-        blue: 136
-        alpha: 1
-      accentColor:
-        red: 125
-        green: 255
-        blue: 229
-        alpha: 1
-      genAccent: true
-      predefinedColor: "Purple"
+      genAccent: false
+      paintCursor: false
     fonts:
-      fontSize: 16
+      fontSize: 14
     tabs:
       compactTabs: true
+      noTabMinWidth: true
     treeView:
+      blendTabs: false
       compactList: true
     ui:
       panelContrast: true
@@ -42,10 +39,22 @@
     additionalGrammars: [
       "*"
     ]
+    forceInline: [
+      "title"
+      "h1"
+      "h2"
+      "h3"
+      "h4"
+      "h5"
+      "h6"
+      "pre"
+    ]
+    makeNeverCloseSelfClosing: false
   autosave:
     enabled: true
   build:
     overrideThemeColors: false
+    panelVisibility: "Hidden"
     saveOnBuild: true
     selectTriggers: false
     statusBar: "Disable"
@@ -55,15 +64,32 @@
       "source.git-config": [
         "gitconfig"
       ]
+      "source.json": [
+        "conf"
+      ]
       "source.plist": [
         "plist"
+      ]
+      "text.html.basic": [
+        "pattern"
+        "list"
+        "item"
+        "block"
+        "page"
       ]
     disabledPackages: [
       "exception-reporting"
       "metrics"
-      "autoclose-html"
       "status-bar"
       "npm"
+      "build"
+      "merge-conflicts"
+      "markdown-scroll-sync"
+      "linter-write-good"
+      "regex-railroad-diagram"
+      "markdown-toc"
+      "build-gulp"
+      "rainbow-selection"
     ]
     ignoredNames: [
       ".git"
@@ -71,7 +97,7 @@
       ".DS_Store"
       ".scssc"
       ".sass-cache"
-      ".map"
+      "*.map"
       ".cache"
       ".pyc"
       ".sqlite3"
@@ -79,17 +105,29 @@
       ".dll"
       ".sublime-workspace"
       ".sublime-projects"
-      "bower_components"
       "node_modules"
+      "bower_components"
       "target"
       ".rej"
-      "resources"
+      ".codekit-cache"
+      ".idea"
+      "_archive"
+      "_archived"
+      "*.jar"
+      "*.built.*"
+    ]
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "hey-pane"
     ]
     projectHome: "~/Projects/"
+    telemetryConsent: "limited"
     themes: [
       "atom-material-ui"
       "cake-syntax"
     ]
+  "custom-title":
+    template: "<% if (fileInProject) { %><%= relativeFilePath.replace('src/js/', '') %><% } %><% if (fileInProject && projectPath) { %> - <% } %><% if (projectPath) { %><%= projectName %><% } %>"
   docblockr:
     align_tags: "no"
     lower_case_primitives: true
@@ -97,54 +135,87 @@
     spacer_between_sections: true
   editor:
     autoIndentOnPaste: false
-    fontFamily: "SourceCodePro-Light"
+    fontFamily: "Source Code Pro"
+    fontSize: 11
     invisibles: {}
+    normalizeIndentOnPaste: false
     showIndentGuide: true
     showInvisibles: true
+    softTabs: false
     softWrap: false
-  "find-and-replace": {}
-  "fuzzy-finder": {}
-  "git-plus": {}
-  "gruvbox-plus-syntax": {}
-  linter:
-    errorPanelHeight: 26
-    showErrorPanel: false
-  "linter-eslint": {}
-  "linter-jscs":
-    esnext: true
-    onlyConfig: true
-  "linter-jshint":
-    disableWhenNoJshintrcFileInPath: true
-  "linter-sass-lint":
-    noConfigDisable: true
-  "linter-scss-lint":
-    disableWhenNoConfigFileInPath: true
-  "markdown-preview": {}
-  "markdown-writer":
-    fileExtension: ".markdown, .md"
+  "file-types":
+    "^\\..*rc$": "text.plain"
+  "fuzzy-finder":
+    preserveLastSearch: true
   minimap:
     plugins:
       pigments: true
       pigmentsDecorationsZIndex: 0
+  "nord-atom-ui":
+    tabSizing: false
   "package-sync":
+    createOnChange: true
     forceOverwrite: true
+  "plantuml-preview":
+    jarLocation: "/Users/cshaver/Development/plantuml/plantuml.jar"
+    useTempDir: false
   "quick-highlight": {}
-  "release-notes":
-    viewedVersion: "0.94.0"
-  "spell-check":
-    grammars: [
-      "source.gfm"
-      "text.git-commit"
-      "text.plain"
-      "text.plain.null-grammar"
-    ]
-  tabs:
-    enableVcsColoring: true
-    usePreviewTabs: true
   "tree-view":
+    alwaysOpenExisting: true
+    focusOnReveal: false
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   welcome:
     showOnStartup: false
-  whitespace: {}
+linter:
+  errorPanelHeight: 26
+  showErrorPanel: false
+"linter-jscs":
+  esnext: true
+  onlyConfig: true
+"linter-jshint":
+  disableWhenNoJshintrcFileInPath: true
+"linter-json-lint":
+  allowComments: true
+"linter-sass-lint":
+  noConfigDisable: true
+"linter-scss-lint":
+  disableWhenNoConfigFileInPath: true
+"linter-write-good":
+  severityLevel: "Info"
+"markdown-writer":
+  fileExtension: ".markdown, .md"
+minimap:
+  plugins:
+    pigments: true
+    pigmentsDecorationsZIndex: 0
+    "split-diff": false
+    "split-diffDecorationsZIndex": 0
+"package-sync":
+  forceOverwrite: true
+preview:
+  _analyticsUserId: "8bef3155-0bbb-46c0-a4e3-3b459eed9c47"
+"release-notes":
+  viewedVersion: "0.94.0"
+"spell-check":
+  grammars: [
+    "source.gfm"
+    "text.git-commit"
+    "text.plain"
+    "text.plain.null-grammar"
+  ]
+"split-diff":
+  ignoreWhitespace: true
+tabs:
+  enableVcsColoring: true
+  usePreviewTabs: true
+"tree-view":
+  alwaysOpenExisting: true
+  hideIgnoredNames: true
+  hideVcsIgnoredFiles: true
+  squashDirectoryNames: true
+welcome:
+  showOnStartup: false
+wordcount:
+  alwaysOn: true
