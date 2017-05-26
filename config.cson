@@ -20,11 +20,15 @@
       _analyticsUserId: "061edd24-4d2e-4dd9-8a6c-145dcb149a67"
     json:
       brace_style: "expand"
+      disabled: true
   "atom-easy-jsdoc": {}
   "atom-material-ui":
     colors:
-      genAccent: false
-      paintCursor: false
+      abaseColor: "#ba3a6e"
+      accentColor: "#30de97"
+      genAccent: true
+      paintCursor: true
+      predefinedColor: "Pink"
     fonts:
       fontSize: 14
     tabs:
@@ -60,6 +64,7 @@
     statusBar: "Disable"
     stealFocus: false
   core:
+    closeDeletedFileTabs: true
     customFileTypes:
       "source.git-config": [
         "gitconfig"
@@ -83,13 +88,17 @@
       "status-bar"
       "npm"
       "build"
-      "merge-conflicts"
       "markdown-scroll-sync"
       "linter-write-good"
       "regex-railroad-diagram"
-      "markdown-toc"
       "build-gulp"
       "rainbow-selection"
+      "autoclose-html"
+      "autocomplete-html-entities"
+      "markdown-toc"
+      "wordcount"
+      "svn"
+      "github"
     ]
     ignoredNames: [
       ".git"
@@ -117,37 +126,45 @@
       "*.built.*"
     ]
     openEmptyEditorOnStart: false
-    packagesWithKeymapsDisabled: [
-      "hey-pane"
-    ]
-    projectHome: "~/Projects/"
+    projectHome: "~/Development/"
     telemetryConsent: "limited"
     themes: [
       "atom-material-ui"
       "cake-syntax"
     ]
+    titleBar: "native"
   "custom-title":
     template: "<% if (fileInProject) { %><%= relativeFilePath.replace('src/js/', '') %><% } %><% if (fileInProject && projectPath) { %> - <% } %><% if (projectPath) { %><%= projectName %><% } %>"
   docblockr:
     align_tags: "no"
     lower_case_primitives: true
     newline_after_block: true
-    spacer_between_sections: true
   editor:
-    autoIndentOnPaste: false
     fontFamily: "Source Code Pro"
     fontSize: 11
     invisibles: {}
-    normalizeIndentOnPaste: false
+    normalizeIndentOnPaste: true
     showIndentGuide: true
     showInvisibles: true
     softTabs: false
     softWrap: false
+    softWrapAtPreferredLineLength: true
   "file-types":
     "^\\..*rc$": "text.plain"
   "fuzzy-finder":
     preserveLastSearch: true
+  "hey-pane":
+    expandedWidth: 100
+  linter: {}
+  "linter-eslint":
+    eslintrcPath: "~/.eslintrc"
+    globalNodePath: "/Users/cshaver/.nvm/versions/node/v6.6.0"
+    useGlobalEslint: true
+  "linter-scss-lint":
+    configName: ".stylelintrc"
+  "linter-ui-default": {}
   minimap:
+    adjustAbsoluteModeHeight: true
     plugins:
       pigments: true
       pigmentsDecorationsZIndex: 0
@@ -159,6 +176,8 @@
   "plantuml-preview":
     jarLocation: "/Users/cshaver/Development/plantuml/plantuml.jar"
     useTempDir: false
+  preview:
+    _analyticsUserId: "a55536a5-4e2b-403c-87ae-bfb5aaabfa73"
   "quick-highlight": {}
   "tree-view":
     alwaysOpenExisting: true
@@ -168,6 +187,13 @@
     squashDirectoryNames: true
   welcome:
     showOnStartup: false
+  wordcount: {}
+".editorconfig.source":
+  editor:
+    autoIndentOnPaste: false
+".sass.source":
+  editor:
+    autoIndentOnPaste: true
 linter:
   errorPanelHeight: 26
   showErrorPanel: false

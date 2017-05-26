@@ -15,11 +15,15 @@
 #
 
 '.source.js':
-  'Console debug'
+  'Console debug':
     'prefix': 'debug'
     'body': 'console.debug($1);'
 
-'.source.js':
   'For loop':
     'prefix': 'for'
-    'body': 'for (let ${2:i} = 0; ${2:i} < ${1:array}.length; ${2:i}++) {\n\tlet ${1:arrIteme${1:array}[${2:i}];$3\'
+    'body': """
+for (let ${2:i} = 0; ${2:i} < ${1:item}s.length; ${2:i}++) {
+	let ${1:item} = ${1:item}s[${2:i}];
+	$3
+}
+    """
