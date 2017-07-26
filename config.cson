@@ -11,6 +11,9 @@
         min: 1
       spawnCount:
         min: 2
+    plugins:
+      playAudio: true
+      screenShake: true
     screenShake:
       maxIntensity: 4
       minIntensity: 2
@@ -57,6 +60,7 @@
   autosave:
     enabled: true
   build:
+    buildOnSave: true
     overrideThemeColors: false
     panelVisibility: "Hidden"
     saveOnBuild: true
@@ -87,18 +91,18 @@
       "metrics"
       "status-bar"
       "npm"
-      "build"
       "markdown-scroll-sync"
       "linter-write-good"
       "regex-railroad-diagram"
       "build-gulp"
-      "rainbow-selection"
       "autoclose-html"
       "autocomplete-html-entities"
       "markdown-toc"
       "wordcount"
-      "svn"
       "github"
+      "pigments"
+      "minimap-pigments"
+      "rainbow-selection"
     ]
     ignoredNames: [
       ".git"
@@ -124,6 +128,8 @@
       "_archived"
       "*.jar"
       "*.built.*"
+      ".gh-pages"
+      "src/hbs/built/index.js"
     ]
     openEmptyEditorOnStart: false
     projectHome: "~/Development/"
@@ -141,7 +147,7 @@
     newline_after_block: true
   editor:
     fontFamily: "Source Code Pro"
-    fontSize: 11
+    fontSize: 12
     invisibles: {}
     normalizeIndentOnPaste: true
     showIndentGuide: true
@@ -162,7 +168,9 @@
     useGlobalEslint: true
   "linter-scss-lint":
     configName: ".stylelintrc"
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelRepresents: "Entire Project"
+    showProviderName: true
   minimap:
     adjustAbsoluteModeHeight: true
     plugins:
@@ -173,6 +181,8 @@
   "package-sync":
     createOnChange: true
     forceOverwrite: true
+  "pdf-view":
+    fitToWidthOnOpen: true
   "plantuml-preview":
     jarLocation: "/Users/cshaver/Development/plantuml/plantuml.jar"
     useTempDir: false
