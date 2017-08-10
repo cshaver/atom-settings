@@ -25,3 +25,6 @@
 
 'atom-workspace':
   'cmd-b': 'recent-files-fuzzy-finder:toggle-finder'
+
+'.find-and-replace':
+  'alt-cmd-r': 'find-and-replace:toggle-regex-option'

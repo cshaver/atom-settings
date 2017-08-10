@@ -157,6 +157,7 @@
     softWrapAtPreferredLineLength: true
   "file-types":
     "^\\..*rc$": "text.plain"
+  "foldername-tabs": {}
   "fuzzy-finder":
     preserveLastSearch: true
   "hey-pane":
