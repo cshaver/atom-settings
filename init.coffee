@@ -16,3 +16,10 @@
 atom.workspace.observeTextEditors (editor) ->
   if editor.getPath()?.match(/\/dotfiles\/.+\/[^.]+$/)
     editor.setGrammar(atom.grammars.grammarForScopeName('text.sh'))
+
+atom.commands.add 'atom-text-editor', 'custom:fix-file', ->
+  editor = atom.workspace.getActiveTextEditor()
+  view = atom.views.getView(editor)
+  atom.commands.dispatch(view, 'EditorConfig:fix-file')
+  atom.commands.dispatch(view, 'core:save')
+  atom.commands.dispatch(view, 'linter-eslint:fix-file')

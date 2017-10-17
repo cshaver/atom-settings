@@ -25,6 +25,9 @@
 
 'atom-workspace':
   'cmd-b': 'recent-files-fuzzy-finder:toggle-finder'
+  'cmd-alt-f': 'custom:fix-file'
+  # 'cmd-alt-f': 'linter-eslint:fix-file'
+  # 'cmd-ctrl-alt-f': 'EditorConfig:fix-file'
 
 '.find-and-replace':
   'alt-cmd-r': 'find-and-replace:toggle-regex-option'
